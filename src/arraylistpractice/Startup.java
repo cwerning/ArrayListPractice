@@ -5,9 +5,14 @@
  */
 package arraylistpractice;
 
+import edu.wctc.advjava.jgl.datetime.DateUtilities;
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.function.Predicate;
+
 
 /**
  *
@@ -16,6 +21,14 @@ import java.util.function.Predicate;
 public class Startup {
 
     public static void main(String[] args) {
+        //date utilities
+        LocalDateTime date2 = LocalDateTime.of(2017, Month.OCTOBER, 3, 7, 7);
+        LocalDateTime date1 = LocalDateTime.now();
+        DateUtilities util = new DateUtilities();
+        
+        System.out.println(util.getDuration(date1, date2));
+        
+        
         Person person1 = new Person("Chad", "Werning", "222-22-2222");
         Person person2 = new Person("Jim", "Smith", "333-33-3333");
         Person person3 = new Person("Joe", "Weber", "444-44-4444");
